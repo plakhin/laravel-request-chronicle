@@ -6,14 +6,18 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    public function up()
+    public function up(): void
     {
-        Schema::create('laravel_request_chronicle_table', function (Blueprint $table) {
+        Schema::create(config()->string('request-chronicle.table_name'), function (Blueprint $table) {
             $table->id();
-
-            // add fields
-
-            $table->timestamps();
+            $table->unsignedTinyInteger('method');
+            $table->string('url');
+            $table->jsonb('headers');
+            $table->jsonb('payload');
+            $table->text('raw');
+            $table->jsonb('ips');
+            $table->nullableMorphs('model');
+            $table->timestamp('created_at');
         });
     }
 };
