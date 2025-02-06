@@ -5,9 +5,11 @@ namespace Plakhin\RequestChronicle\Models;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Casts\Attribute;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\MassPrunable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
+use Plakhin\RequestChronicle\Database\Factories\RequestFactory;
 use Plakhin\RequestChronicle\Enums\HttpMethod;
 
 /**
@@ -24,6 +26,9 @@ use Plakhin\RequestChronicle\Enums\HttpMethod;
  * */
 class Request extends Model
 {
+    /** @use HasFactory<RequestFactory> */
+    use HasFactory;
+
     use MassPrunable;
 
     public const ?string UPDATED_AT = null;
@@ -60,6 +65,11 @@ class Request extends Model
         return static::where('created_at', '<=', now()->subHours(
             config('request-chronicle.prune_after_hours', 24 * 7)
         ));
+    }
+
+    protected static function newFactory()
+    {
+        return RequestFactory::new();
     }
 
     public function model(): MorphTo
