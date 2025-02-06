@@ -64,10 +64,7 @@
         "laravel": {
             "providers": [
                 "Plakhin\\RequestChronicle\\RequestChronicleServiceProvider"
-            ],
-            "aliases": {
-                "RequestChronicle": "Plakhin\\RequestChronicle\\Facades\\RequestChronicle"
-            }
+            ]
         }
     },
     "minimum-stability": "dev",
