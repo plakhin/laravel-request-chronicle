@@ -2,7 +2,8 @@
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/plakhin/laravel-request-chronicle.svg?style=flat-square)](https://packagist.org/packages/plakhin/laravel-request-chronicle)
 [![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/plakhin/laravel-request-chronicle/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/plakhin/laravel-request-chronicle/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/plakhin/laravel-request-chronicle/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/plakhin/laravel-request-chronicle/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
+[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/plakhin/laravel-request-chronicle/check-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/plakhin/laravel-request-chronicle/actions?query=workflow%3A"Check+PHP+code+style+issues"+branch%3Amain)
+[![GitHub PHPStan Action Status](https://img.shields.io/github/actions/workflow/status/plakhin/laravel-request-chronicle/phpstan.yml?branch=main&label=static%20analysis&style=flat-square)](https://github.com/plakhin/laravel-request-chronicle/actions?query=workflow%3A"PHPStan"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/plakhin/laravel-request-chronicle.svg?style=flat-square)](https://packagist.org/packages/plakhin/laravel-request-chronicle)
 
 ## Installation
