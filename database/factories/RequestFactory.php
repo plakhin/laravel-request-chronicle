@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Plakhin\RequestChronicle\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
@@ -18,8 +20,6 @@ class RequestFactory extends Factory
 
     /**
      * Define the model's default state.
-     *
-     * @return array<string, mixed>
      */
     public function definition(): array
     {
@@ -48,7 +48,7 @@ class RequestFactory extends Factory
             ->when(
                 count($payload),
                 fn (Stringable $raw) => $raw
-                    ->append('Content-Length: '.strlen((string) json_encode($payload))."\n")
+                    ->append('Content-Length: '.mb_strlen((string) json_encode($payload))."\n")
                     ->append("Content-Type:   application/json\n\n")
                     ->append((string) json_encode($payload))
             )->toString();
