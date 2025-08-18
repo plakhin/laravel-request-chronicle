@@ -57,7 +57,7 @@ class Request extends Model
 
     public function getTable(): string
     {
-        return config('request-chronicle.table_name');
+        return config()->string('request-chronicle.table_name', 'request_chronicle');
     }
 
     public function prunable(): Builder
