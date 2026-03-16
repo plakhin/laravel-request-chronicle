@@ -26,7 +26,7 @@ jobs:
           coverage: none
 
       - name: Install composer dependencies
-        uses: ramsey/composer-install@v3
+        uses: ramsey/composer-install@v4
 
       - name: Run Pint Test
         run: ./vendor/bin/pint --test --parallel
